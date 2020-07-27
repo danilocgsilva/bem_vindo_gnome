@@ -3,6 +3,7 @@
 set -e
 
 source /usr/local/bin/bemvindosrc/bemvindo_functions.sh
+source /usr/local/bin/bemvindosrc/quotes_location.sh
 
 sleep 2
 date_hour=$(date +%H)

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source install_assets.sh
 source quotes_location.sh
 
-cp messages $quotes_location
+cp messages $src/$quotes_location

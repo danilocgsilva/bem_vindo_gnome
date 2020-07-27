@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source quotes_location.sh
-
 bemvindo_message_from_code() {
 
 	declare -a messages
