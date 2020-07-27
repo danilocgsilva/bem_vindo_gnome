@@ -78,7 +78,7 @@ bemvindo_choose_title() {
 	declare -a horas_dormir
 
 	horas_dormir[0]=22
-	horas_dormir[0]=23
+	horas_dormir[1]=23
 
 	if [[ " ${horas_dormir[@]} " =~ $hour_now ]]; then
 		echo "Boa noite! Não demore muito pra dormir."
@@ -86,11 +86,11 @@ bemvindo_choose_title() {
 
 	declare -a horas_madrugada
 
-	horas_madrugada[0]=0
-	horas_madrugada[1]=1
-	horas_madrugada[2]=2
-	horas_madrugada[3]=3
-	horas_madrugada[4]=4
+	horas_madrugada[0]=00
+	horas_madrugada[1]=01
+	horas_madrugada[2]=02
+	horas_madrugada[3]=03
+	horas_madrugada[4]=04
 
 	if [[ " ${horas_madrugada[@]} " =~ $hour_now ]]; then
 		echo "Boa noite. Espero que não seja insônia!"
@@ -98,8 +98,8 @@ bemvindo_choose_title() {
 
 	declare -a horas_muito_cedo
 
-	horas_muito_cedo[0]=5
-	horas_muito_cedo[1]=6
+	horas_muito_cedo[0]=05
+	horas_muito_cedo[1]=06
 
 	if [[ " ${horas_muito_cendo[@]} " =~ $hour_now ]]; then
 		echo "Bom dia comandante! Acordou cedo, hein?"
@@ -107,9 +107,9 @@ bemvindo_choose_title() {
 
 	declare -a horas_manha
 
-	horas_manha[0]=7
-	horas_manha[1]=8
-	horas_manha[2]=9
+	horas_manha[0]=07
+	horas_manha[1]=08
+	horas_manha[2]=09
 	horas_manha[3]=10
 	horas_manha[4]=11
 

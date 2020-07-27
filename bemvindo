@@ -7,4 +7,4 @@ source /usr/local/bin/bemvindosrc/quotes_location.sh
 
 sleep 2
 date_hour=$(date +%H)
-notify-send "$(bemvindo_choose_title $date_hour) Tudo bem com você?" "$(bemvindo_choose_message)"
+notify-send "$(bemvindo_choose_title $date_hour)" "$(bemvindo_choose_message)"
