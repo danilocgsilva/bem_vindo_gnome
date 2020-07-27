@@ -1,7 +1,9 @@
 #!/bin/bash
 
-bemvindo_choose_message() {
-	
+source quotes_location.sh
+
+bemvindo_message_from_code() {
+
 	declare -a messages
 
 	messages+=("Bem vindo novamente!")
@@ -11,8 +13,40 @@ bemvindo_choose_message() {
 	messages+=("\"Com o conhecimento nossas dúvidas aumentam.\" Johann Goethe")
 	messages+=("\"As palavras são os suspiros da alma.\" Pitágoras")
 	messages+=("\"As pessoas felizes lembram o passado com gratidão, alegram-se com o presente e encaram o futuro sem medo.\" Epícuro")
+	messages+=("\"Todas as vidas de homens são contos de fadas escritos pelas mãos de Deus.\" Hans Christian Andersen")
+	messages+=("\"A felicidade é simplesmente uma questão de luz interior.\" Henri Lacordaire")
+	messages+=("\"Mesmo as noites totalmente sem estrelas podem anunciar a aurora de uma grande realização.\" Martin Luther King")
+	messages+=("\"Todo homem tem o direito de decidir o seu próprio destino.\" Bob Marley")
+	messages+=("\"Apenas um raio de sol é suficiente para afastar várias sombras.\" São Francisco de Assis.")
+	messages+=("\"Cultivar estados mentais positivos, como a generosidade e a compaixão, leva à felicidade.\" Dalai lama.")
+	messages+=("\"O homem é um gênio quando está sonhando.\" Akira Kurosawa")
+	messages+=("\"Nenhuma atividade no bem é insignificante. As mais altas árvores são oriunidas de minúsculas sementes.\" Chico Xavier.")
+	messages+=("\"O bom humor é a única qualidade divina do homem.\" Arthur Schopenhauer")
+	messages+=("\"Alimente seu cérebro com pensamentos saudáveis, para que seu corpo possa refletir saúde.\" Minutos de Sabedoria")
+	messages+=("\"Abra seus braços para as mudanças, mas não abra mão de seus valores.\" Dalai Lama")
+	messages+=("\"Um grande homem sem religião é um simples animal sem alma.\" Daniel Defoe")
+	messages+=("\"A cidadania não é atitude passiva, mas ação permanente, em favor da comunidade.\" Tancredo Neves")
+	messages+=("\"Outrora, a velhice era uma dignidade; hoje, ela é um peso.\" Fraçois René de Chateaubriand")
+	messages+=("\"Seus sonhos são as letras do livro que sua vida está escrevendo. Paulo Coelho")
+	messages+=("\"A gula mata mais do que a espada.\" George Herbert")
+	messages+=("\"Uma boa cabeça e um bom coração são sempre uma formidável combinação\" Nelson Mandela")
 
-	echo "${messages[$((RANDOM%7))]}"
+	echo "${messages[$((RANDOM%23))]}"
+}
+
+bemvindo_message_from_quotes_files() {
+	number_quotes=$(cat $quotes_location | wc -l)
+	cat $quotes_location | sed -n $((RANDOM%$number_quotes))p
+}
+
+
+bemvindo_choose_message() {
+
+	if [ -f $quotes_location ]; then
+		bemvindo_message_from_quotes_files
+	else
+		bemvindo_message_from_code
+	fi
 }
 
 bemvindo_choose_title() {
