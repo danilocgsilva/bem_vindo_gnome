@@ -1,7 +1,11 @@
 #!/bin/bash
 
-exec=bemvindo
-exec_path=/usr/local/bin
+source install_assets.sh
 
 cp $exec $exec_path
+src_folder=$exec_path/$src
+if ! [ -d $src_folder ]; then
+    mkdir $src_folder
+fi
+cp $src/bemvindo_functions.sh $exec_path/$src
 chmod +x $exec_path/$exec
