@@ -28,6 +28,9 @@ bemvindo_message_from_code() {
 	messages+=("\"Seus sonhos são as letras do livro que sua vida está escrevendo. Paulo Coelho")
 	messages+=("\"A gula mata mais do que a espada.\" George Herbert")
 	messages+=("\"Uma boa cabeça e um bom coração são sempre uma formidável combinação\" Nelson Mandela")
+	messages+=("\"Eu não destruo um inimigo quando eu o torno meu amigo?\" Abraham Lincoln")
+	messages+=("\"... se você quiser testar o caráter de um homen, dê-lhe poder.\" Abraham Lincoln")
+	messages+=("\"Seu eu tivesse 9 horas para cortar uma árvore, passaria 6 horas afiando meu machado\" Abraham Lincoln")
 
 	echo "${messages[$((RANDOM%23))]}"
 }
