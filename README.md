@@ -1,5 +1,7 @@
 # Bem vindo gnome
 
+Esta aplicação foi feita para funcionar apenas no Ubuntu 20.04.
+
 Coloca uma mensagem de boas vindas toda vez que iniciar o computador.
 
 Feito apenas para Linux.
