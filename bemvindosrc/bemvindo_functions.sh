@@ -31,6 +31,7 @@ bemvindo_message_from_code() {
 	messages+=("\"Eu não destruo um inimigo quando eu o torno meu amigo?\" Abraham Lincoln")
 	messages+=("\"... se você quiser testar o caráter de um homen, dê-lhe poder.\" Abraham Lincoln")
 	messages+=("\"Seu eu tivesse 9 horas para cortar uma árvore, passaria 6 horas afiando meu machado\" Abraham Lincoln")
+	messages+=("\"Invenção requer duas coisa. 1. A habilidade de tentar muitos experimentos. 2. não ter que viver com danos colaterais de experimentos falhos.\" Andy Jassy")
 
 	echo "${messages[$((RANDOM%23))]}"
 }
