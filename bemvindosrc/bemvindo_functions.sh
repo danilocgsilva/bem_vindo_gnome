@@ -32,8 +32,28 @@ bemvindo_message_from_code() {
 	messages+=("\"... se você quiser testar o caráter de um homen, dê-lhe poder.\" Abraham Lincoln")
 	messages+=("\"Seu eu tivesse 9 horas para cortar uma árvore, passaria 6 horas afiando meu machado\" Abraham Lincoln")
 	messages+=("\"Invenção requer duas coisa. 1. A habilidade de tentar muitos experimentos. 2. não ter que viver com danos colaterais de experimentos falhos.\" Andy Jassy")
+	messages+=("\"Talentosos faz o que pode; gênio faz o que é preciso.\" Edward Bulwer Lytton")
+	messages+=("\"Devemos prestar atenção à qualidade das ações que praticamos.\" Aristóteles")
+	messages+=("\"O sonho e a esperança são dois calmantes que a Natureza concede ao ser humano.\" Frederico I")
+	messages+=("\"Dinheiro é um negócio curioso. Quem não tem está louco para ter, e quem tem está cheio de problemas por causa dele.\" Ayrton Senna")
+	messages+=("\"Não há nada melhor como um sonho para criar o futuro.\" Victor Hugo")
+	messages+=("\"As paixões cegam. O verdadeiro amor nos torna lúcidos.\" Autor Desconhecido")
+	messages+=("\"Não é preciso experiência mística para descobrir que o mundo é bom.\" Chogyam Trunpga")
+	messages+=("\"Os fatos não deixam de existir só porque são ignorados.\" Audous Huxley")
+	messages+=("\"A beleza das coisas existe no espírito de quem as contempla.\" David Hume")
+	messages+=("\"O otimismo é a fé em ação.\" Helen Keller")
+	messages+=("\"Grandes resultados requerem grandes ambições.\" Heráclito")
+	messages+=("\"A paz mais desvantajosa é melhor do que a guerra mais injusta.\" Erasmo de Rotterdam")
+	messages+=("\"É preciso não relaxar nunca, mesmo tendo chegado tão longe.\" Paulo Coelho.")
+	messages+=("\"A Terra é minha casa e a humanidade, a minha família.\" Kalil Gibran")
+	messages+=("\"A verdade só é encontrada quando os homens são livres para a perseguir.\" Franklin Delano Roosevelt")
+	messages+=("\"A palavra foi dada ao homem para disfarçar o pensamento.\" Charles Telleyrand-Périgord")
+	messages+=("\"A felicidade é um bem que se multiplica ao ser dividido.\" Marxwell Maltz")
+	messages+=("\"A vida é como um livro que deve ser folheado página por página sem se consultar o índice.\" Autor Desconhecido")
+	messages+=("\"Não acrescente dias à sua vida, mas vida aos seus dias.\" Harry Benjamin")
+	# 29 de fevereiro
 
-	echo "${messages[$((RANDOM%23))]}"
+	echo "${messages[$((RANDOM%46))]}"
 }
 
 bemvindo_message_from_quotes_files() {

@@ -4,12 +4,12 @@ set -e
 
 source /usr/local/bin/bemvindosrc/bemvindo_functions.sh
 source /usr/local/bin/bemvindosrc/quotes_location.sh
-MUSIC_PATH=/usr/share/sounds/Yaru/stereo/system-ready.oga
-
-sleep 2
+source /usr/local/bin/bemvindosrc/quotes_sound.sh
 date_hour=$(date +%H)
-notify-send "$(bemvindo_choose_title $date_hour)" "$(bemvindo_choose_message)" -t 6000
+
+sleep 3
+notify-send "$(bemvindo_choose_title $date_hour)" "$(bemvindo_choose_message)" -t 9000
 if [ -f $MUSIC_PATH ] && which paplay > /dev/null; then
+    echo $MUSIC_PATH
     paplay $MUSIC_PATH
 fi
-

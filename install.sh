@@ -9,4 +9,5 @@ if ! [ -d $src_folder ]; then
 fi
 cp $src/bemvindo_functions.sh $exec_path/$src
 cp $src/quotes_location.sh $exec_path/$src
+cp $src/quotes_sound.sh $exec_path/$src
 chmod +x $exec_path/$exec
