@@ -7,11 +7,17 @@ source /usr/local/bin/bemvindosrc/quotes_location.sh
 source /usr/local/bin/bemvindosrc/quotes_sound.sh
 date_hour=$(date +%H)
 
-sleep 4
+sleep 2
 if [ -f $MUSIC_PATH ] && which paplay > /dev/null; then
-    paplay $MUSIC_PATH
+    paplay $MUSIC_PATH &
 fi
 
 sleep 4
-notify-send "$(bemvindo_choose_title $date_hour)" "$(bemvindo_choose_message)" -t 9000
+
+if which notify-send > /dev/null
+then
+    notify-send "$(bemvindo_choose_title $date_hour)" "$(bemvindo_choose_message)" -t 9000
+else
+    kdialog --passivepopup "$(bemvindo_choose_message)" --title "$(bemvindo_choose_title $date_hour)" 9
+fi
 

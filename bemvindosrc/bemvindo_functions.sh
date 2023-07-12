@@ -96,8 +96,10 @@ bemvindo_message_from_code() {
 	messages+=("\"O caráter pode se manifestar nos grandes momentos, mas ele é formado por pequenos.\" - Philips Brooks")
 	# 20 de abril
 
-	ARRAY_COUNT=${#messages[@]}
-	echo "${messages[$ARRAY_COUNT]}"
+
+    ARRAY_COUNT=${#messages[@]}
+    TARGET_COUNT=$((RANDOM%$ARRAY_COUNT))
+    echo "${messages[$TARGET_COUNT - 1]}"
 }
 
 bemvindo_message_from_quotes_files() {
