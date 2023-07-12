@@ -12,7 +12,7 @@ if [ -f $MUSIC_PATH ] && which paplay > /dev/null; then
     paplay $MUSIC_PATH &
 fi
 
-sleep 4
+sleep 1
 
 if which notify-send > /dev/null
 then
